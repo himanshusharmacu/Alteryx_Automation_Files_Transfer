@@ -1,0 +1,968 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.1">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File OutputFileName="" RecordLimit="" SearchSubDirs="False" FileFormat="25">E:\Internship Projects\Project_Auto\DailyDT\DDT File Details.xlsx|||`der_vdi_input$`</File>
+          <FormatSpecificOptions>
+            <FirstRowData>False</FirstRowData>
+            <ImportLine>1</ImportLine>
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DDT File Details.xlsx
+Table=`der_vdi_input$`</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="source_filename_initial" size="255" source="File: E:\Internship Projects\Project_Auto\DailyDT\DDT File Details.xlsx|||`der_vdi_input$`" type="V_String" />
+            <Field name="source_file_directory" size="255" source="File: E:\Internship Projects\Project_Auto\DailyDT\DDT File Details.xlsx|||`der_vdi_input$`" type="V_String" />
+            <Field name="to_be_transferred" size="255" source="File: E:\Internship Projects\Project_Auto\DailyDT\DDT File Details.xlsx|||`der_vdi_input$`" type="V_String" />
+            <Field name="target_file_directory" size="255" source="File: E:\Internship Projects\Project_Auto\DailyDT\DDT File Details.xlsx|||`der_vdi_input$`" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="174" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_5783907e42e64eb6b1ff07c58df6b5db_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="210" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[to_be_transferred] = "Y"</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>to_be_transferred</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2019-01-02 17:15:21</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>Y</Operand>
+              <StartDate>2019-01-02 17:15:21</StartDate>
+              <EndDate>2019-01-02 17:15:21</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[to_be_transferred] = "Y"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="294" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_feb794ab28da4e90b173ca9502412ff7_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="66">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="42" y="222" width="100" height="72" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Read all the files which needs to be transferred from source to target location</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="68">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="186" y="222" width="100" height="40" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Filter out the files which needs to be transferred</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="69">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="354" y="174" width="108" height="96" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>MACRO :
+Performs the task of creating a batch script to transfer the recent file from Datastore to s3 bucket</Text>
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="98">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="510" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Field_1</Field>
+          <NumFields value="4" />
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>Field_1</RootName>
+          <Delimeters value="&quot;" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="99">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="582" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_a5bfefedb2e145eaa2b6e1287d1b6cf5_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="100">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="606" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Time" selected="True" />
+            <SelectField field="Date" selected="True" />
+            <SelectField field="Field_12" selected="True" rename="Input_with_location" />
+            <SelectField field="Field_14" selected="True" rename="Output_with_location" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="101">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="702" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_ffaf5f68662644af8c424854eadb9d8a_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="106">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="294" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_8f4f17d2bc2948a19b80e406cfaffb66_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="110">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="690" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ReverseString([Input_with_location])" field="File_Name" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[File_Name = ReverseString([Input_with_location])
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="111">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="774" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>File_Name</Field>
+          <NumFields value="2" />
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>File_Name</RootName>
+          <Delimeters value="\" />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="112">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="870" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_5dae6095a9c444bfb1865004fd6095d1_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="113">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="942" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="ReverseString([Source_Destination])" field="Source_Destination" size="1073741823" type="V_WString" />
+            <FormulaField expression="ReverseString([Filename])" field="Filename" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Source_Destination = ReverseString([Source_Destination])
+Filename = ReverseStrin...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="114">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="858" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Date" selected="True" />
+            <SelectField field="Time" selected="True" />
+            <SelectField field="File_Name1" selected="True" rename="Filename" />
+            <SelectField field="File_Name2" selected="True" rename="Source_Destination" />
+            <SelectField field="Output_with_location" selected="True" rename="Target_Destination" />
+            <SelectField field="Input_with_location" selected="True" rename="filewithpath" />
+            <SelectField field="File_Name" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="115">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1014" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_eb31e77f376340c3aa3dd5bf42e7f93e_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="120">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextToColumns.TextToColumns">
+        <Position x="1062" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Field>Filename</Field>
+          <NumFields value="2" />
+          <ErrorHandling>Last</ErrorHandling>
+          <RootName>Filename</RootName>
+          <Delimeters value="." />
+          <Flags value="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextToColumns" />
+    </Node>
+    <Node ToolID="121">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1158" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_8ebe52d8a95c4adc91e8d7526d4199bc_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="125">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1170" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="REGEX_Replace([Filename1], &quot;[\d]&quot;, &quot;&quot;)" field="File_Category" size="1073741823" type="V_WString" />
+            <FormulaField expression="REGEX_Replace([Filename1], &quot;[\D]&quot;, &quot;&quot;)" field="dates" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>File_Category = REGEX_Replace([Filename1], "[\d]", "")
+dates = REGEX_Replace([Fi...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="134">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="450" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_daa28153dca44820a5bffb0323c52823_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="176">
+      <GuiSettings>
+        <Position x="378" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="ControlParams"><![CDATA[Control Parameter (12)=source_file_directory
+Control Parameter (20)=source_filename_initial
+Control Parameter (31)=target_file_directory
+]]></Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name>macrofinal (133)</Name>
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output60">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: Z:\Data Enablement &amp; Reporting\DER Internal\Process_Auto\DDT_Himanshu\DailyDT\DailyDT\batchscriptafterreplace.bat (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output62">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: Z:\Data Enablement &amp; Reporting\DER Internal\Process_Auto\DDT_Himanshu\DailyDT\DailyDT\batch_command.bat (BatchMacro)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output63">
+          <RecordInfo>
+            <Field name="Field_1" size="254" source="File: Z:\Data Enablement &amp; Reporting\DER Internal\Process_Auto\DDT_Himanshu\DailyDT\DailyDT\batchscriptafterreplace.bat (BatchMacro)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output68">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: Z:\Data Enablement &amp; Reporting\DER Internal\Process_Auto\DDT_Himanshu - Copy\DailyDT\DailyDT\batchscript.txt (BatchMacro)" type="V_String" />
+            <Field name="Time" source="Formula: DateTimeNow() (BatchMacro)" type="Time" />
+            <Field name="Date" source="Formula: DateTimeNow() (BatchMacro)" type="Date" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output69">
+          <RecordInfo>
+            <Field name="FullPath" size="32767" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_WString" />
+            <Field name="Directory" size="32767" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_WString" />
+            <Field name="FileName" size="260" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_WString" />
+            <Field name="ShortFileName" size="14" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_WString" />
+            <Field name="CreationTime" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="DateTime" />
+            <Field name="LastAccessTime" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="DateTime" />
+            <Field name="LastWriteTime" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="DateTime" />
+            <Field name="Size" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Int64" />
+            <Field name="AttributeArchive" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeCompressed" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeEncrypted" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeHidden" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeNormal" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeOffline" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeReadonly" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeReparsePoint" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeSparseFile" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeSystem" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeTemporary" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output70">
+          <RecordInfo>
+            <Field name="FullPath" size="32767" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_WString" />
+            <Field name="Directory" size="32767" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_WString" />
+            <Field name="FileName" size="260" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_WString" />
+            <Field name="ShortFileName" size="14" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_WString" />
+            <Field name="CreationTime" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="DateTime" />
+            <Field name="LastAccessTime" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="DateTime" />
+            <Field name="LastWriteTime" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="DateTime" />
+            <Field name="Size" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Int64" />
+            <Field name="AttributeArchive" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeCompressed" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeEncrypted" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeHidden" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeNormal" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeOffline" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeReadonly" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeReparsePoint" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeSparseFile" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeSystem" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+            <Field name="AttributeTemporary" source="Directory: (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output71">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: Z:\Data Enablement &amp; Reporting\DER Internal\Process_Auto\DDT_Himanshu - Copy\DailyDT\DailyDT\batch_command.bat (BatchMacro) (BatchMacro)" type="V_String" />
+            <Field name="Time" source="Formula: DateTimeNow() (BatchMacro) (BatchMacro)" type="Time" />
+            <Field name="Date" source="Formula: DateTimeNow() (BatchMacro) (BatchMacro)" type="Date" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output72">
+          <RecordInfo>
+            <Field name="Field_1" size="254" source="File: Z:\Data Enablement &amp; Reporting\DER Internal\Process_Auto\DDT_Himanshu - Copy\DailyDT\DailyDT\batch_command.bat (BatchMacro)" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName (BatchMacro)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output73">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: Z:\Data Enablement &amp; Reporting\DER Internal\Process_Auto\DDT_Himanshu - Copy\DailyDT\DailyDT\batch_command.bat (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output74">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: Z:\Data Enablement &amp; Reporting\DER Internal\Process_Auto\DDT_Himanshu - Copy\DailyDT\DailyDT\batch_command.bat (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_String" />
+            <Field name="FileName" size="254" source="File: FileName (BatchMacro) (BatchMacro) (BatchMacro) (BatchMacro)" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output75">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: Z:\Data Enablement &amp; Reporting\DER Internal\Process_Auto\DDT_Himanshu - Copy\DailyDT\DailyDT\batch_command.bat (BatchMacro)" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output76">
+          <RecordInfo>
+            <Field name="Field_1" size="5000" source="File: E:\Internship Projects\Project_Auto\DailyDT\batch_command.bat (BatchMacro) (BatchMacro) (BatchMacro)" type="V_String" />
+            <Field name="Time" source="Formula: DateTimeNow() (BatchMacro) (BatchMacro) (BatchMacro)" type="Time" />
+            <Field name="Date" source="Formula: DateTimeNow() (BatchMacro) (BatchMacro) (BatchMacro)" type="Date" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="macrofinal.yxmc" />
+    </Node>
+    <Node ToolID="144">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1338" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_3f50d1ae933844499359de97e9056d59_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="145">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1266" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="filewithpath" selected="False" />
+            <SelectField field="Filename1" selected="False" />
+            <SelectField field="Filename2" selected="True" rename="File Format" />
+            <SelectField field="dates" selected="True" rename="File Date" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="146">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1350" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="GetEnvironmentVariable(&quot;USERNAME&quot;)" field="User Name" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[User Name = GetEnvironmentVariable("USERNAME")
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="147">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="1542" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\HIMANS~1\AppData\Local\Temp\Engine_10280_b82aa639a3fd4f9fa783db2f5b77bd5f_\Engine_1480_e860ad6b6b05450a9ddae3d4f3f8e797_.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="148">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1446" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="User Name" selected="True" rename="Process Ran By" />
+            <SelectField field="Date" selected="True" rename="Transfer Date" />
+            <SelectField field="Time" selected="True" rename="Transfer Time" />
+            <SelectField field="Filename" selected="True" />
+            <SelectField field="Source_Destination" selected="True" />
+            <SelectField field="Target_Destination" selected="True" />
+            <SelectField field="File Format" selected="True" />
+            <SelectField field="File_Category" selected="True" />
+            <SelectField field="File Date" selected="True" rename="Date of FIle Created" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="154">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1602" y="138" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File FileFormat="25" MaxRecords="">E:\Internship Projects\Project_Auto\Tracker\Files Transferred - Final.xlsx|||Files Transferred</File>
+          <Passwords />
+          <FormatSpecificOptions>
+            <SkipFieldNames>False</SkipFieldNames>
+            <OutputOption>Append</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Files Transferred - Final.xlsx
+Table=Files Transferred</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="False" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="106" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="True" />
+      <Destination ToolID="176" Connection="Control" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="98" Connection="Output" />
+      <Destination ToolID="99" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="98" Connection="Output" />
+      <Destination ToolID="100" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="101" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="100" Connection="Output" />
+      <Destination ToolID="110" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="110" Connection="Output" />
+      <Destination ToolID="111" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="111" Connection="Output" />
+      <Destination ToolID="112" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="111" Connection="Output" />
+      <Destination ToolID="114" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="113" Connection="Output" />
+      <Destination ToolID="115" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="113" Connection="Output" />
+      <Destination ToolID="120" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="114" Connection="Output" />
+      <Destination ToolID="113" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="Output" />
+      <Destination ToolID="121" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="120" Connection="Output" />
+      <Destination ToolID="125" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="125" Connection="Output" />
+      <Destination ToolID="145" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="176" Connection="Output76" />
+      <Destination ToolID="134" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="176" Connection="Output76" />
+      <Destination ToolID="98" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="Output" />
+      <Destination ToolID="144" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="145" Connection="Output" />
+      <Destination ToolID="146" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="146" Connection="Output" />
+      <Destination ToolID="148" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="148" Connection="Output" />
+      <Destination ToolID="147" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="148" Connection="Output" />
+      <Destination ToolID="154" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="False" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Daily_Data_Transfer_Workflow_2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,1 @@
+xcopy "input_location" "output_location\." /Y
